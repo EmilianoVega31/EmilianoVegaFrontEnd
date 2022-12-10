@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import HeaderTop from './components/HeaderTop.vue';
-import RankingBox from './components/RankingBox.vue';
+import HeaderTop from '../emilianovega_vue/HeaderTop.vue';
+import RankingBox from '../emilianovega_vue/RankingBox.vue';
 
 export default {
   name: 'App',
@@ -30,7 +30,7 @@ export default {
     // promises
 
       async fetchFighters(){
-          const res = await fetch('http://localhost:8080/p4prankings')
+          const res = await fetch('http://localhost:5959/p4prankings')
           const data = await res.json()
           console.log( data )
           return data
@@ -58,7 +58,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .container {
-  max-width: 650px;
+  max-width: 550px;
   margin: 30px auto;
   overflow: auto;
   min-height: 450px;
@@ -66,7 +66,7 @@ body {
   padding: 30px;
   border-radius: 5px;
   display: grid;
-  height:300vh;
+  height:100vh;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   gap: 0.5em;
